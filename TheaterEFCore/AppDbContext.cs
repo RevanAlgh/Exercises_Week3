@@ -29,9 +29,9 @@ namespace TheaterEFCore
                 .HasMaxLength(255);
 
             modelBuilder.Entity<Country>()
-                .HasMany(c => c.Movies)
-                .WithOne(m => m.Country)
-                .HasForeignKey(m => m.CountryID);
+                .HasMany(c => c.Movies) // One to Many relationship
+                .WithOne(m => m.Country) // Many Movie has one Country
+                .HasForeignKey(m => m.CountryID); // FK
 
             // Author Configuration
             modelBuilder.Entity<Author>()
@@ -96,5 +96,5 @@ namespace TheaterEFCore
     }
 
 }
-    
+
 

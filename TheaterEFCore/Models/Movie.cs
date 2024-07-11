@@ -14,9 +14,9 @@
         public decimal Budget { get; set; }
         public decimal BoxOffice { get; set; }
         public string Language { get; set; }
-        public int CountryID { get; set; }
-        public Country Country { get; set; }
-        public ICollection<MoviesAuthors> MoviesAuthors { get; set; }
+        public int CountryID { get; set; } // Foreign key to Country
+        public Country Country { get; set; } // Navigation property back to Country
+        public ICollection<MoviesAuthors> MoviesAuthors { get; set; } // One to Many relationship
 
     }
 }
