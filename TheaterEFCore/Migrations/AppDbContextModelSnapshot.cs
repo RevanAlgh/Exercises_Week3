@@ -36,7 +36,7 @@ namespace TheaterEFCore.Migrations
 
                     b.HasKey("AuthorID");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("TheaterEFCore.Models.Country", b =>
@@ -54,7 +54,7 @@ namespace TheaterEFCore.Migrations
 
                     b.HasKey("CountryID");
 
-                    b.ToTable("Countries");
+                    b.ToTable("Countries", (string)null);
                 });
 
             modelBuilder.Entity("TheaterEFCore.Models.Movie", b =>
@@ -96,7 +96,7 @@ namespace TheaterEFCore.Migrations
 
                     b.HasIndex("CountryID");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Movies", (string)null);
                 });
 
             modelBuilder.Entity("TheaterEFCore.Models.MoviesAuthors", b =>
@@ -111,7 +111,7 @@ namespace TheaterEFCore.Migrations
 
                     b.HasIndex("AuthorID");
 
-                    b.ToTable("MoviesAuthors");
+                    b.ToTable("MoviesAuthors", (string)null);
                 });
 
             modelBuilder.Entity("TheaterEFCore.Models.Movie", b =>
